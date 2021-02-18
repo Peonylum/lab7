@@ -10,4 +10,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+	$('.likeBtn').click(incrementCount);
+}
+
+function incrementCount(e) {
+	e.preventDefault();
+	ga('create', 'UA-190141836-1', 'auto');
+	ga('send','event','like','click');
 }
